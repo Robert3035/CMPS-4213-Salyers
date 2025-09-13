@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html>
+    
+    <body>
+        <canvas width="500" height="500" id="glCanvas"/>
+        <script>
+            var canvas = document.getElementById("glCanvas");
+            var gl = canvas.getContext("webgl2");
+
+            // We need to triangluate the square so gl can understand how to render it
+            var squareOfTriangles = [
+                //First triange
+                -.5,  .5, 0,
+                -.5, -.5, 0,
+                 .5, -.5, 0,
+                //Second triangle
+                 .5, -.5, 0,
+                 .5,  .5, 0,
+                -.5,  .5, 0,
+
+
+            ];
+
+            console.log(squareOfTriangles);
+
+            
+            // The hidden.js script will execute the rest of the code needed to render the scene
+            
+
+
+        </script>
+
+        <script src="hidden.js"></script>
+        
+    </body>
+</html>
